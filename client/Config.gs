@@ -1,5 +1,9 @@
 const CONFIG = {
   WEB_APP_URL: "https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec",
   PERIOD: "LAST_90_DAYS",
-  MIN_CLICKS: 2
+  MIN_CLICKS: 2,
+  MIN_IMPRESSIONS: 100,
+  CHUNK_SIZE: 15000,
+  SHARED_SECRET: "YOUR_SHARED_SECRET",
+  MAX_RETRIES: 4
 };

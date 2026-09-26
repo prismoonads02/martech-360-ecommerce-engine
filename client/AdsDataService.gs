@@ -17,8 +17,8 @@ const AdsDataService = {
     const result = AdsApp.search(query);
     while (result.hasNext()) {
       const row = result.next();
-      const itemId = row.segments.productItemId;
-      
+      const itemId = String(row.segments.productItemId || "").trim().toLowerCase();
+      if (!itemId) continue;
       if (!productsMap[itemId]) {
         productsMap[itemId] = { imp: 0, clicks: 0, cost: 0, conv: 0 };
       }
